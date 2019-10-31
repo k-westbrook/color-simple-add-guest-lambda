@@ -11,11 +11,12 @@ exports.handler = (event, context, callback) => {
     UpdateExpression: "set attendees = :a",
     ExpressionAttributeValues: {
       ":a": event.attendees
-    }
+    },
+    ReturnValues: "UPDATED_NEW"
   };
   docClient.update(params, function (err, data) {
 
-    let recordReturned = data.Items[0];
+    let recordReturned = data.Attributes;
 
     if (err || (recordReturned.password !== event.password)) {
 
