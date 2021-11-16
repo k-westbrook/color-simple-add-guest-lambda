@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/k-westbrook/color-simple-add-guest-lambda#readme",
   "dependencies": {
-    "aws-sdk": "^2.561.0"
+    "aws-sdk": "^2.814.0"
   }
 }
